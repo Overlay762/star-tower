@@ -1,0 +1,37 @@
+{
+  "enemies": [
+    {
+      "id": "enemy_normal",
+      "name": "史莱姆",
+      "type": "normal",
+      "hp": 80,
+      "speed": 100,
+      "gold": 10,
+      "color": "#E8D44D",
+      "scale": 1.0,
+      "damage": 1
+    },
+    {
+      "id": "enemy_elite",
+      "name": "精英怪",
+      "type": "elite",
+      "hp": 250,
+      "speed": 70,
+      "gold": 30,
+      "color": "#9B59B6",
+      "scale": 1.4,
+      "damage": 2
+    },
+    {
+      "id": "enemy_boss",
+      "name": "BOSS",
+      "type": "boss",
+      "hp": 800,
+      "speed": 40,
+      "gold": 100,
+      "color": "#E87830",
+      "scale": 2.0,
+      "damage": 5
+    }
+  ]
+}

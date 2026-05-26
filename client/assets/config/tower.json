@@ -1,0 +1,49 @@
+{
+  "towers": [
+    {
+      "id": "tower_arrow",
+      "name": "箭塔",
+      "description": "基础攻击塔，射速快",
+      "attack": 15,
+      "range": 180,
+      "attackSpeed": 0.6,
+      "cost": 50,
+      "upgradeCost": 80,
+      "upgradeAttackBonus": 10,
+      "color": "#4A90D9",
+      "bulletSpeed": 400,
+      "bulletColor": "#FFFFFF"
+    },
+    {
+      "id": "tower_cannon",
+      "name": "炮塔",
+      "description": "高伤害，范围攻击",
+      "attack": 35,
+      "range": 140,
+      "attackSpeed": 1.5,
+      "cost": 80,
+      "upgradeCost": 120,
+      "upgradeAttackBonus": 20,
+      "color": "#D94A4A",
+      "bulletSpeed": 300,
+      "bulletColor": "#FF6B6B",
+      "splashRadius": 60
+    },
+    {
+      "id": "tower_ice",
+      "name": "冰塔",
+      "description": "减速敌人",
+      "attack": 8,
+      "range": 160,
+      "attackSpeed": 0.8,
+      "cost": 60,
+      "upgradeCost": 90,
+      "upgradeAttackBonus": 5,
+      "color": "#4AD9D9",
+      "bulletSpeed": 350,
+      "bulletColor": "#A0F0F0",
+      "slowPercent": 0.4,
+      "slowDuration": 2.0
+    }
+  ]
+}

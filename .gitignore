@@ -1,0 +1,21 @@
+node_modules/
+dist/
+build/
+.DS_Store
+*.js.map
+
+# Cocos Creator
+client/library/
+client/temp/
+client/local/
+client/build/
+client/native/
+
+# Server data
+server/data/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

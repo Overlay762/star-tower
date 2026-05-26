@@ -1,0 +1,8 @@
+{
+  "name": "tower-defense-demo",
+  "version": "1.0.0",
+  "description": "多平台塔防 Demo - Cocos Creator 3.x",
+  "creator": {
+    "version": "3.9.0"
+  }
+}

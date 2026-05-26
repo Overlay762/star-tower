@@ -1,0 +1,114 @@
+{
+  "buffs": [
+    {
+      "id": "buff_atk_up",
+      "name": "攻击提升",
+      "description": "所有塔攻击力 +20%",
+      "type": "atk_boost",
+      "value": 0.2,
+      "weight": 10,
+      "iconColor": "#FF6B6B",
+      "maxStack": 5,
+      "isStackable": true
+    },
+    {
+      "id": "buff_atk_speed",
+      "name": "急速射击",
+      "description": "所有塔攻击速度 +25%",
+      "type": "speed_boost",
+      "value": 0.25,
+      "weight": 10,
+      "iconColor": "#FFD700",
+      "maxStack": 4,
+      "isStackable": true
+    },
+    {
+      "id": "buff_range_up",
+      "name": "射程扩展",
+      "description": "所有塔攻击范围 +15%",
+      "type": "range_boost",
+      "value": 0.15,
+      "weight": 8,
+      "iconColor": "#4A90D9",
+      "maxStack": 3,
+      "isStackable": true
+    },
+    {
+      "id": "buff_freeze",
+      "name": "冰冻强化",
+      "description": "攻击附带冰冻效果（减速50%，持续2秒）",
+      "type": "freeze",
+      "value": 0.5,
+      "weight": 7,
+      "iconColor": "#4AD9D9",
+      "maxStack": 1,
+      "isStackable": false
+    },
+    {
+      "id": "buff_ricochet",
+      "name": "弹射强化",
+      "description": "子弹可弹射 +1 个目标",
+      "type": "ricochet",
+      "value": 1,
+      "weight": 7,
+      "iconColor": "#B0B0C0",
+      "maxStack": 3,
+      "isStackable": true
+    },
+    {
+      "id": "buff_crit",
+      "name": "致命一击",
+      "description": "15% 概率造成双倍伤害",
+      "type": "crit",
+      "value": 0.15,
+      "weight": 8,
+      "iconColor": "#E87830",
+      "maxStack": 1,
+      "isStackable": false
+    },
+    {
+      "id": "buff_gold_boost",
+      "name": "淘金热",
+      "description": "击杀敌人金币 +30%",
+      "type": "gold_boost",
+      "value": 0.3,
+      "weight": 8,
+      "iconColor": "#FFD700",
+      "maxStack": 3,
+      "isStackable": true
+    },
+    {
+      "id": "buff_hp_regen",
+      "name": "生命恢复",
+      "description": "立即恢复 3 点生命值",
+      "type": "hp_regen",
+      "value": 3,
+      "weight": 6,
+      "iconColor": "#E74C3C",
+      "maxStack": 99,
+      "isStackable": true
+    },
+    {
+      "id": "buff_splash",
+      "name": "溅射强化",
+      "description": "攻击对目标周围造成 30% 溅射伤害",
+      "type": "splash",
+      "value": 0.3,
+      "weight": 6,
+      "iconColor": "#D94A4A",
+      "maxStack": 1,
+      "isStackable": false
+    },
+    {
+      "id": "buff_instant_gold",
+      "name": "意外之财",
+      "description": "立即获得 80 金币",
+      "type": "instant_gold",
+      "value": 80,
+      "weight": 7,
+      "iconColor": "#FFD700",
+      "maxStack": 99,
+      "isStackable": true
+    }
+  ]
+}

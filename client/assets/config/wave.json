@@ -1,0 +1,76 @@
+{
+  "initialGold": 200,
+  "initialHp": 20,
+  "waves": [
+    {
+      "wave": 1,
+      "enemyType": "enemy_normal",
+      "count": 8,
+      "spawnInterval": 0.8,
+      "restTime": 5
+    },
+    {
+      "wave": 2,
+      "enemyType": "enemy_normal",
+      "count": 12,
+      "spawnInterval": 0.7,
+      "restTime": 5
+    },
+    {
+      "wave": 3,
+      "enemyType": "enemy_normal",
+      "count": 10,
+      "spawnInterval": 0.7,
+      "restTime": 8
+    },
+    {
+      "wave": 4,
+      "enemyType": "enemy_elite",
+      "count": 6,
+      "spawnInterval": 1.2,
+      "restTime": 8
+    },
+    {
+      "wave": 5,
+      "enemyType": "enemy_normal",
+      "count": 15,
+      "spawnInterval": 0.5,
+      "restTime": 5
+    },
+    {
+      "wave": 6,
+      "enemyType": "enemy_elite",
+      "count": 5,
+      "spawnInterval": 1.0,
+      "restTime": 8
+    },
+    {
+      "wave": 7,
+      "enemyType": "enemy_normal",
+      "count": 20,
+      "spawnInterval": 0.4,
+      "restTime": 10
+    },
+    {
+      "wave": 8,
+      "enemyType": "enemy_elite",
+      "count": 8,
+      "spawnInterval": 0.9,
+      "restTime": 10
+    },
+    {
+      "wave": 9,
+      "enemyType": "enemy_normal",
+      "count": 15,
+      "spawnInterval": 0.5,
+      "restTime": 8
+    },
+    {
+      "wave": 10,
+      "enemyType": "enemy_boss",
+      "count": 1,
+      "spawnInterval": 0,
+      "restTime": 0
+    }
+  ]
+}
