@@ -12,6 +12,7 @@ export class Tower extends Component {
   @property
   level: number = 1;
 
+  private towerManager: TowerManager | null = null;
   private config: TowerConfig | null = null;
   private attackRange: number = 150;
   private attackDamage: number = 10;
@@ -168,6 +169,4 @@ export class Tower extends Component {
       this.towerNode.active = visible;
     }
   }
-
-  private towerManager: TowerManager | null = null;
 }

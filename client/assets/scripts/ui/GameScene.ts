@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Vec3, Color, Graphics, Label, UITransform, director } from 'cc';
+import { _decorator, Component, Node, Vec3, Color, Graphics, Label, UITransform, director, PhysicsSystem2D } from 'cc';
 import { EventBus, GameEvent } from '../core/EventBus';
 import { GameManager } from '../core/GameManager';
 import { ConfigManager } from '../core/ConfigManager';
@@ -273,6 +273,10 @@ export class GameScene extends Component {
 
   // 初始化系统
   private initSystems(): void {
+    // 启用 2D 物理系统（塔/子弹碰撞检测依赖）
+    PhysicsSystem2D.instance.enable = true;
+    console.log('[GameScene] 2D物理系统已启用');
+
     // 初始化塔管理器
     const towerManager = TowerManager.getInstance();
     const bulletPrefab = null as any; // 使用动态创建

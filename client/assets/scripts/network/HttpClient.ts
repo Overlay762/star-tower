@@ -5,6 +5,15 @@ export interface ApiResponse<T = any> {
   error?: string;
 }
 
+// Cocos Creator 3.x 中 sys 支持跨平台存储（Web/微信/原生）
+declare const sys: {
+  localStorage: {
+    getItem(key: string): string | null;
+    setItem(key: string, value: string): void;
+    removeItem(key: string): void;
+  };
+};
+
 // HTTP 客户端（单例）
 export class HttpClient {
   private static instance: HttpClient;
@@ -31,19 +40,19 @@ export class HttpClient {
   // 设置 JWT Token
   setToken(token: string): void {
     this.token = token;
-    // 同时保存到本地存储
-    localStorage.setItem('td_token', token);
+    // 使用 Cocos 跨平台存储抽象
+    sys.localStorage.setItem('td_token', token);
   }
 
   // 清除 Token
   clearToken(): void {
     this.token = null;
-    localStorage.removeItem('td_token');
+    sys.localStorage.removeItem('td_token');
   }
 
   // 从本地存储恢复 Token
   loadToken(): void {
-    const saved = localStorage.getItem('td_token');
+    const saved = sys.localStorage.getItem('td_token');
     if (saved) {
       this.token = saved;
     }

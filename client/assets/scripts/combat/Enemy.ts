@@ -1,5 +1,7 @@
 import { _decorator, Component, Node, Vec3, Color, Sprite, UITransform, Graphics } from 'cc';
 import { EnemyConfig } from '../core/ConfigManager';
+import { GameManager } from '../core/GameManager';
+import { DamageResolver } from './DamageResolver';
 
 const { ccclass, property } = _decorator;
 
@@ -138,7 +140,6 @@ export class Enemy extends Component {
     this.isDead = true;
 
     // 通知 GameManager 扣血
-    const { GameManager } = require('../core/GameManager');
     GameManager.getInstance().onEnemyReachedEnd(this.enemyDamage);
 
     this.node.destroy();
@@ -163,9 +164,6 @@ export class Enemy extends Component {
   private die(): void {
     if (this.isDead) return;
     this.isDead = true;
-
-    const { GameManager } = require('../core/GameManager');
-    const { DamageResolver } = require('./DamageResolver');
 
     // 计算金币奖励
     const goldReward = DamageResolver.getInstance().calculateGoldReward(this.goldReward);

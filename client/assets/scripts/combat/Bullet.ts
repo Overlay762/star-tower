@@ -1,5 +1,7 @@
-import { _decorator, Component, Node, Vec3, Color, Graphics, Collider2D, Contact2DType, IPhysics2DContact } from 'cc';
+import { _decorator, Component, Node, Vec3, Color, Graphics, Collider2D, Contact2DType, IPhysics2DContact, CircleCollider2D } from 'cc';
 import { Enemy } from './Enemy';
+import { EnemyManager } from './EnemyManager';
+import { BulletSystem } from './BulletSystem';
 import { TowerConfig } from '../core/ConfigManager';
 import { DamageResolver } from './DamageResolver';
 
@@ -32,7 +34,7 @@ export class Bullet extends Component {
     this.createVisual(config.bulletColor);
 
     // 设置碰撞检测
-    const collider = this.node.getComponent(Collider2D) || this.node.addComponent(require('cc').CircleCollider2D);
+    const collider = this.node.getComponent(Collider2D) || this.node.addComponent(CircleCollider2D);
     const circleCollider = collider as any;
     circleCollider.radius = 6;
     circleCollider.sensor = true;
@@ -91,7 +93,6 @@ export class Bullet extends Component {
   private handleRicochet(hitEnemy: Enemy, ricochetCount: number): void {
     if (ricochetCount <= 0) return;
 
-    const { EnemyManager } = require('./EnemyManager');
     const enemies = EnemyManager.getInstance().findEnemiesInRange(
       hitEnemy.getPosition(),
       200,
@@ -110,7 +111,6 @@ export class Bullet extends Component {
   private handleSplashDamage(hitEnemy: Enemy, result: any): void {
     if (result.splashDamage <= 0 || result.splashRadius <= 0) return;
 
-    const { EnemyManager } = require('./EnemyManager');
     const enemies = EnemyManager.getInstance().findEnemiesInRange(
       hitEnemy.getPosition(),
       result.splashRadius,
@@ -159,7 +159,6 @@ export class Bullet extends Component {
     this.targetEnemy = null;
 
     if (this.node && this.node.isValid) {
-      const { BulletSystem } = require('./BulletSystem');
       BulletSystem.getInstance().recycle(this.node);
     }
   }
